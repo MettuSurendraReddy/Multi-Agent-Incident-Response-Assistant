@@ -1,0 +1,16 @@
+{
+  "id": "INC-1003",
+  "service": "notifications-api",
+  "summary": "Some notification requests appear delayed.",
+  "severity": "low",
+  "symptoms": [
+    "A small number of users report delayed notifications"
+  ],
+  "logs": [
+    "Request accepted for asynchronous processing"
+  ],
+  "metrics": {
+    "http_5xx_rate": 0.01,
+    "p95_latency_ms": 480
+  }
+}

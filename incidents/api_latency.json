@@ -1,0 +1,19 @@
+{
+  "id": "INC-1002",
+  "service": "catalog-api",
+  "summary": "The catalog API is responding slowly.",
+  "severity": "medium",
+  "symptoms": [
+    "Product pages take several seconds to load",
+    "Latency rose after a scheduled data import"
+  ],
+  "logs": [
+    "Request handler completed successfully",
+    "No dependency timeout detected"
+  ],
+  "metrics": {
+    "cpu_utilization": 0.93,
+    "p95_latency_ms": 3100,
+    "http_5xx_rate": 0.01
+  }
+}

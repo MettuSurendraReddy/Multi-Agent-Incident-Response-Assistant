@@ -1,0 +1,32 @@
+[
+  {
+    "name": "database pool saturation",
+    "incident": "database_pool_saturation.json",
+    "expected_cause_code": "database_pool_saturation",
+    "required_evidence": [
+      "metric db_pool_utilization=0.98",
+      "log: ConnectionPoolTimeout: timed out waiting for an available connection"
+    ],
+    "expected_review_status": "ready_for_human_review",
+    "approval_required": true
+  },
+  {
+    "name": "API latency from compute saturation",
+    "incident": "api_latency.json",
+    "expected_cause_code": "compute_saturation",
+    "required_evidence": [
+      "metric cpu_utilization=0.93",
+      "metric p95_latency_ms=3100"
+    ],
+    "expected_review_status": "ready_for_human_review",
+    "approval_required": true
+  },
+  {
+    "name": "unknown cause is escalated",
+    "incident": "unknown_incident.json",
+    "expected_cause_code": "unknown",
+    "required_evidence": [],
+    "expected_review_status": "ready_for_human_review",
+    "approval_required": true
+  }
+]
