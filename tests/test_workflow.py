@@ -352,7 +352,7 @@ class IncidentCliTests(unittest.TestCase):
                 result = cli.main(
                     [
                         "--incident",
-                        "incidents\\database_pool_saturation.json",
+                        str(PROJECT_ROOT / "incidents" / "database_pool_saturation.json"),
                         "--format",
                         "json",
                         "--save-report",
